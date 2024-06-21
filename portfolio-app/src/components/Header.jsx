@@ -1,5 +1,5 @@
 import React from 'react'
-import img from 'C:\\Users\\assaf\\OneDrive\\Desktop\\advertisemarket\\portfolio-app\\src\\assets\\contentstar.jpg'
+import img from '../assets/contentstar.jpg'
 
 function Header() {
   return (

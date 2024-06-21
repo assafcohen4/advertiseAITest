@@ -153,6 +153,10 @@ html, body {
   color: #555;
 }
 
+.charts {
+  text-align: center;
+}
+
 @keyframes fadeIn {
   to {
     opacity: 1;
