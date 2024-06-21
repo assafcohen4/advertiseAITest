@@ -20,7 +20,7 @@ html, body {
   align-items: center;
   height: 100%;
   width: 100%;
-  background-color: #5d43cf;
+  background-color: #3374be;
 }
 
 .header {
@@ -90,6 +90,7 @@ html, body {
   display: flex;
   border-top: 1px solid #ddd;
   justify-content: center;
+  
 
   padding: 10px;
 }
@@ -100,6 +101,7 @@ html, body {
   padding: 10px;
   font-size: 16px;
   box-sizing: border-box; /* Ensures padding is included in the width */
+  border-radius: 10px;
 }
 
 .input-area button {
@@ -108,6 +110,8 @@ html, body {
   color: #fff;
   border: none;
   cursor: pointer;
+  margin-left: 8px;
+  border-radius: 10px;
 }
 
 .input-area button:hover {

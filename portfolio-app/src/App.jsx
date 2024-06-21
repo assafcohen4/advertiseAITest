@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './App.css';
 import ChatWindow from './components/ChatWindow';
 import Header from './components/Header';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import NewPage from './components/Newpage';
 
 
 function App() {
@@ -21,12 +23,24 @@ function App() {
   };
   
   return (
-    <>
-    <Header/>
+    <Router>
     <div className="App">
-      <ChatWindow messages={messages} onSendMessage={sendMessage} />    
+      <Header />
+      <Routes>
+        <Route path="/" element={<ChatWindow messages={messages} onSendMessage={sendMessage} />} />
+        <Route path="/newpage" element={<NewPage />} />
+      </Routes>
+      <NavigateButton />
     </div>
-    </>
+  </Router>
+  );
+}
+
+function NavigateButton() {
+  const navigate = useNavigate();
+
+  return (
+    <button onClick={() => navigate('/newpage')}>Click me</button>
   );
 }
 
