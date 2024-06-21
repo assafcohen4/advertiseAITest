@@ -5,8 +5,8 @@ import Header from './components/Header';
 
 
 function App() {
-  const [messages, setMessages] = useState([]);
-
+  const [messages, setMessages] = useState([{ text: 'Tell me about your product and together we will make it succeed', sender: 'bot' }]);
+  
   const sendMessage = (message) => {
     if (message.trim()) {
       setMessages([...messages, { text: message, sender: 'user' }]);
@@ -19,7 +19,7 @@ function App() {
       }, 1000);
     }
   };
-
+  
   return (
     <>
     <Header/>
