@@ -8,6 +8,8 @@ import NewPage from './components/Newpage';
 
 function App() {
   const [messages, setMessages] = useState([{ text: 'Tell me about your product and together we will make it succeed', sender: 'bot' }]);
+  const [counter, setCounter] = useState(0)
+
   
   const sendMessage = (message) => {
     if (message.trim()) {
@@ -21,7 +23,14 @@ function App() {
       }, 1000);
     }
   };
-  
+  function NavigateButton() {
+    const navigate = useNavigate();
+    
+    return (
+      <button onClick={() => {counter !== 2 ? setCounter(counter+1) : navigate('/newpage')}}>{counter}</button>
+    );
+  }
+
   return (
     <Router>
     <div className="App">
@@ -36,12 +45,6 @@ function App() {
   );
 }
 
-function NavigateButton() {
-  const navigate = useNavigate();
 
-  return (
-    <button onClick={() => navigate('/newpage')}>Click me</button>
-  );
-}
 
 export default App;
