@@ -1,38 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
+import MessageList from './Chat/MessageList';
+import InputArea from './Chat/InputArea';
 
 function ChatWindow({ messages, onSendMessage }) {
-  const [input, setInput] = useState('');
-
-  const handleSendMessage = () => {
-    onSendMessage(input);
-    setInput('');
-  };
-
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      handleSendMessage();
-    }
-  };
-
   return (
     <div className="chat-window">
-      <div className="messages">
-        {messages.map((msg, index) => (
-          <div key={index} className={`message ${msg.sender}`}>
-            {msg.text}
-          </div>
-        ))}
-      </div>
-      <div className="input-area">
-        <input
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyUp={handleKeyPress}
-          placeholder="Type a message..."
-        />
-        <button onClick={handleSendMessage}>Send</button>
-      </div>
+      <MessageList messages={messages} />
+      <InputArea onSendMessage={onSendMessage} />
     </div>
   );
 }

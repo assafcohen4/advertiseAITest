@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import ChatWindow from './components/ChatWindow';
 
+
 function App() {
   const [messages, setMessages] = useState([]);
 
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <div className="App">
+      
       <ChatWindow messages={messages} onSendMessage={sendMessage} />
     </div>
   );
