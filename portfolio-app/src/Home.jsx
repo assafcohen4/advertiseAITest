@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import ChatWindow from './components/ChatWindow';
-
 import {useNavigate } from 'react-router-dom';
-
-
 
 function Home() {
     const [messages, setMessages] = useState([{ text: 'Tell me about your product and together we will make it succeed', sender: 'bot' }]);
