@@ -46,7 +46,7 @@ html, body {
   
   width: 100%;
   max-width: 600px; /* Set a max-width for better readability */
-  height: 90%;
+  height: 70vh;
   background: #9dbadb;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -89,6 +89,8 @@ html, body {
 .input-area {
   display: flex;
   border-top: 1px solid #ddd;
+  justify-content: center;
+
   padding: 10px;
 }
 

@@ -21,11 +21,12 @@ function App() {
   };
 
   return (
-    
+    <>
+    <Header/>
     <div className="App">
-      <Header/>
       <ChatWindow messages={messages} onSendMessage={sendMessage} />    
     </div>
+    </>
   );
 }
 
