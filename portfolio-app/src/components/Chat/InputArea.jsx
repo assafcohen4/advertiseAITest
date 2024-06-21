@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 function InputArea({ onSendMessage }) {
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState('')
+  
 
   const handleSendMessage = () => {
     onSendMessage(input);
