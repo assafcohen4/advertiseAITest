@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import ChatWindow from './components/ChatWindow';
+import Header from './components/Header';
 
 
 function App() {
@@ -20,9 +21,10 @@ function App() {
   };
 
   return (
+    
     <div className="App">
-      
-      <ChatWindow messages={messages} onSendMessage={sendMessage} />
+      <Header/>
+      <ChatWindow messages={messages} onSendMessage={sendMessage} />    
     </div>
   );
 }

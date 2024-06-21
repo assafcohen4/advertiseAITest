@@ -12,16 +12,38 @@ html, body {
   background-color: #3374be;
 }
 
+
+
 .App {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
-  background-color: #9dbadb;
+  background-color: #5d43cf;
 }
 
+.header {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+  background-color: aqua;
+  text-align: center;
+  width: 100%;
+  max-width: 600px; /* Set a max-width for better readability */
+  height: 90%;
+  background: #9dbadb;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 10%;
+  
+
+
+}
 .chat-window {
+  
   width: 100%;
   max-width: 600px; /* Set a max-width for better readability */
   height: 90%;
