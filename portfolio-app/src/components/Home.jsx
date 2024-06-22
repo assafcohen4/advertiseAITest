@@ -6,7 +6,7 @@ import Header from './Header';
 
 function Home() {
     const [messages, setMessages] = useState([{ text: 'Tell me about your product and together we will make it succeed', sender: 'bot' }]);
-    const [counter, setCounter] = useState(0);
+    const [counter, setCounter] = useState(1);
     const navigate = useNavigate();
   
     const sendMessage = (message) => {
@@ -15,7 +15,7 @@ function Home() {
         setCounter(counter+1)
   
         // Simulate bot response
-        if(counter !==2){
+        if(counter !==3){
           setTimeout(() => {
             setMessages((prevMessages) => [
               ...prevMessages,
@@ -27,7 +27,7 @@ function Home() {
           setTimeout(() => {
             setMessages((prevMessages) => [
               ...prevMessages,
-              { text: 'Lets find the best formula for you ', sender: 'bot' },
+              { text: 'Lets find the best formula for you. ', sender: 'bot' },
             ]);
           }, 1000);
           setTimeout(() => {
