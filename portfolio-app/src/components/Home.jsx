@@ -27,7 +27,7 @@ function Home() {
           setTimeout(() => {
             setMessages((prevMessages) => [
               ...prevMessages,
-              { text: 'Lets find the best formula for you '  + counter, sender: 'bot' },
+              { text: 'Lets find the best formula for you ', sender: 'bot' },
             ]);
           }, 1000);
           setTimeout(() => {
