@@ -19,7 +19,7 @@ function Home() {
           setTimeout(() => {
             setMessages((prevMessages) => [
               ...prevMessages,
-              { text: 'This is a bot response. '  + counter, sender: 'bot' },
+              { text: 'This is a bot response '  + counter, sender: 'bot' },
             ]);
           }, 1000);
         }
