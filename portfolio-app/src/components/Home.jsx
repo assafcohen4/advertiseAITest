@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import './App.css';
-import ChatWindow from './components/ChatWindow';
+import '../App.css';
+import ChatWindow from './Chat/ChatWindow';
 import {useNavigate } from 'react-router-dom';
+import Header from './Header';
 
 function Home() {
     const [messages, setMessages] = useState([{ text: 'Tell me about your product and together we will make it succeed', sender: 'bot' }]);
@@ -43,6 +44,7 @@ function Home() {
   
     return (
       <>
+        <Header/>
         <ChatWindow messages={messages} onSendMessage={sendMessage} />
       </>
     );

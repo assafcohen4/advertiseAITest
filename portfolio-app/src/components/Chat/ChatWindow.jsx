@@ -1,6 +1,6 @@
 import React from 'react';
-import MessageList from './Chat/MessageList';
-import InputArea from './Chat/InputArea';
+import MessageList from './MessageList';
+import InputArea from './InputArea';
 
 function ChatWindow({ messages, onSendMessage }) {
   
